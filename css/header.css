@@ -2,4 +2,7 @@
   display: block;
   width: 26px;
   height: 2px;
+}
+.header__menu > span:not(:last-child) {
+  margin-bottom: 3px;
 }/*# sourceMappingURL=header.css.map */
