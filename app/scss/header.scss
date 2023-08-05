@@ -20,11 +20,12 @@
         
         
         &:not(:last-child) {
-            margin-bottom: 3px;
+            margin-bottom: 5px;
         }
         }
         
     }
+
     &__links {
         a {
             position: relative;
@@ -40,22 +41,33 @@
                 content: "";
                 display: block;
                 position: absolute;
-                height: 5px;
-                background: lime;
+                height: 4px;
                 left:0;
                 right: 0;
                 bottom:-30px;
+                background: linear-gradient(to right, $limegreen, $brightCyan);
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
             }
 
             &:hover {
                 color: $darkBlue;
+
+                &::before {
+                    opacity: 1;
+                }
             }
         }
     }
 
     &__cta {
         font-size: 0.875rem;
-        color:$white
+        color:$white;
+        transition: opacity 300ms ease-in-out;
+
+        &:hover {
+            opacity: 0.50;
+        }
     }
 
 }
