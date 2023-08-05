@@ -58,6 +58,10 @@ a, a:visited, a:hover {
 .header nav {
   padding: 24px;
 }
+.header__logo img {
+  width: 8.8125rem;
+  height: 1.375rem;
+}
 .header__menu > span {
   display: block;
   background-color: hsl(233, 26%, 24%);
@@ -70,9 +74,13 @@ a, a:visited, a:hover {
 .header__links a {
   font-size: 0.875rem;
   color: hsl(233, 8%, 62%);
+  transition: color 200ms ease-in-out;
 }
 .header__links a:not(:last-child) {
   margin-right: 32px;
+}
+.header__links a:hover {
+  color: hsl(233, 26%, 24%);
 }
 .header__cta {
   font-size: 0.875rem;

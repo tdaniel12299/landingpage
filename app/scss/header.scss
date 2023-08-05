@@ -25,19 +25,25 @@
         }
         
     }
-
     &__links {
         a {
             font-size: $font-sm;
             color:$grayishBlue;
+            transition: color 200ms ease-in-out;
 
             &:not(:last-child){
                 margin-right: 32px;
             }
+
+            &:hover {
+                color: $darkBlue;
+            }
         }
     }
+
     &__cta {
         font-size: 0.875rem;
         color:$white
     }
+
 }
