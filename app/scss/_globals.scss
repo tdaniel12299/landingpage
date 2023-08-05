@@ -19,7 +19,7 @@ body {
 }
 a, a:visited, a:hover {
     text-decoration: none;
-    color: $grayishBlue;
+    
 }
 
 .flex {
@@ -43,19 +43,19 @@ a, a:visited, a:hover {
     border:0;
     border-radius: 50px;
     color: $white;
-    font-weight: 700;
+    font-weight: 400;
     cursor: pointer;
 
 }
 
 .hide-for-mobile {
-    @include breakpoint-down(medium){
+    @include breakpoint-down(small){
+        display: none;
+    }
+}
+.hide-for-desktop {
+    @include breakpoint-up(medium){
         display: none;
     }
 }
 
-.hide-for-desktop {
-    @include breakpoint-up(large){
-        display:none
-    }
-}

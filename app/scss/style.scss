@@ -6,7 +6,9 @@ $lightGreyishBlue: hsl(220, 16%, 96%);
 $veryLightgrey: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%); 
 
+
 @import "variables";
+@import "mixins";
 @import "globals";
 @import "header";
-@import "mixins";
+
