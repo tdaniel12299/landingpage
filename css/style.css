@@ -331,4 +331,18 @@ a, a:visited, a:hover {
 }
 .hero__cta:hover::before {
   opacity: 1;
+}
+
+@media (min-width: 64em) {
+  .feature__grid {
+    display: flex;
+  }
+}
+.feature__item {
+  padding: 0.9375rem;
+}
+@media (min-width: 64em) {
+  .feature__item {
+    flex: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
