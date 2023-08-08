@@ -15,6 +15,11 @@ body {
   line-height: 1.3;
   color: hsl(233, 8%, 62%);
 }
+@media (min-width: 64em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
 body.noscroll {
   overflow: hidden;
 }
@@ -32,6 +37,8 @@ a, a:visited, a:hover {
   padding-bottom: 2.25rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  max-width: 69.375rem;
+  margin: 0 auto;
 }
 
 .flex {
@@ -199,15 +206,56 @@ a, a:visited, a:hover {
   animation: fade-out 250ms ease-in-out forwards;
 }
 
+.hero {
+  background-color: hsl(0, 0%, 98%);
+}
+@media (min-width: 64em) {
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+}
 .hero__image {
   position: relative;
   background-image: url("/images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 17.5rem;
+  height: 17.5rem;
+  width: 100%;
+}
+@media (min-width: 40em) {
+  .hero__image {
+    min-height: 25rem;
+    background-position: center 50%;
+  }
+}
+@media (min-width: 64em) {
+  .hero__image {
+    flex: 3;
+    order: 2;
+    min-height: 41rem;
+    background-image: none;
+  }
 }
 .hero__image::before {
+  content: "";
+  background-image: url("/images/bg-intro-desktop.svg");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 17.5rem;
+}
+@media (min-width: 64em) {
+  .hero__image::before {
+    width: inherit;
+    background-position: 0% 89%;
+    left: 10.125rem;
+  }
+}
+.hero__image::after {
   content: "";
   background-image: url("/images/image-mockups.png");
   width: 100%;
@@ -218,8 +266,30 @@ a, a:visited, a:hover {
   background-position: center bottom;
   min-height: 17.5rem;
 }
+@media (min-width: 40em) {
+  .hero__image::after {
+    background-size: 54%;
+  }
+}
+@media (min-width: 64em) {
+  .hero__image::after {
+    width: 120%;
+    height: 114%;
+    background-size: 56%;
+    background-position: center 75%;
+    left: 8%;
+  }
+}
 .hero__text {
   text-align: center;
+}
+@media (min-width: 64em) {
+  .hero__text {
+    height: auto;
+    flex: 2;
+    order: 1;
+    text-align: left;
+  }
 }
 .hero__text h1 {
   font-weight: 300;
@@ -227,6 +297,11 @@ a, a:visited, a:hover {
   line-height: 1.15;
   font-size: 2.31rem;
   margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  .hero__text h1 {
+    font-size: 3.25rem;
+  }
 }
 .hero__text p {
   line-height: 1.5;

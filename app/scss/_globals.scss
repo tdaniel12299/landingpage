@@ -16,6 +16,10 @@ body {
     line-height: 1.3;
     color: $grayishBlue;
 
+    @include breakpoint-up(large){
+       font-size: $font-med;
+    }
+
     &.noscroll {
         overflow: hidden;
     }  
@@ -35,6 +39,9 @@ a, a:visited, a:hover {
     padding-bottom: 2.25rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    max-width: 69.375rem;
+    margin: 0 auto;
+
 
 }
 
